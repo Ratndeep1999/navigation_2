@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
-import 'first_page.dart';
+import 'package:navigation_2/Routes/string_routes.dart';
+import 'Routes/routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(useMaterial3: false),
-      home: FirstPage(),
+      initialRoute: RouteName.firstScreen,
+      onGenerateRoute: Routes.generateRoute,
     );
   }
 }
